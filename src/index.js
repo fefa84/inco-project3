@@ -7,21 +7,30 @@ const crypto = require('crypto');
 
 
 
-app.use(express.static(path.join(__dirname, 'public')));//https://expressjs.com/en/starter/static-files.html
+app.use(express.static(path.join(__dirname, '../public/images')));//odniesienie do folderu, w którym jest plik index.js!!!!  join służy do obsługi kompatybilności między systemami(chodzi o różny zapis ścieżek w róznych systemach)// można też użyć sieżki app.use('/', express.static('./')), która sprawi, że będzie dostęp do wszytskich plków i folderów
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); 
+
+
+
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 
 const { users } = require("./data.js");
 const { schedules } = require("./data.js");
 
 
+//app.get('/', (req, res) => {
+//   res.send') 
+// })
 
-app.get('/', (req, res) => {
-  res.send('Welcome to our schedule website') 
+app.get('/', function (req, res) {
+  res.render('index', { title: 'Welcome', message: 'Welcome to our schedule website' })
 })
 
 app.get('/users', (req, res) => {
-  res.send(users);
+  res.render('users', );
 })
 
 app.get('/schedules', (req, res) => {

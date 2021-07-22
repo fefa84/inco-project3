@@ -1,0 +1,19 @@
+xtends layout.pug
+
+block content
+    table
+        tbody
+            tr
+                th First name
+                th Last name
+                th Email
+                th Password
+                th
+            -each user in users
+                tr.userRow
+                    td #{user.firstname}
+                    td #{user.lastname}
+                    td #{user.email}
+                    td #{user.password}
+                    td
+                        a(href='/users/#{user.userId}') Show
