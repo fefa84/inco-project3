@@ -1,0 +1,20 @@
+extends ./layouts/layout
+
+block content
+    include ./layouts/nav-layout
+    table.table-users.table-users--singleUser
+        tbody.tbody
+            tr
+                th First name
+                td #{(user.firstname)}
+            tr    
+                th Last name
+                td #{user.lastname}
+            tr 
+                th Email 
+                td #{user.email} 
+            tr 
+                th Passport 
+                td #{user.password}
+                
+                     

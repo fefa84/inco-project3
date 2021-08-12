@@ -1,0 +1,30 @@
+extends ./layouts/layout
+
+block content
+    include ./layouts/nav-layout
+    
+    div.form-container
+      p Please fill up the form to add new schedule
+      form.add-schedule-form(method='POST' action='/schedules')
+        p.paragraph-form
+          label.label(for='user_id') Name: 
+          select.select(name='user_id')
+            each user,userId in users 
+              option(value=userId) #{user.firstname} #{user.lastname}
+        p.paragraph-form
+          label.label(for='day') Day: 
+          select.select(name="day") 
+            option(value=1) Monday
+            option(value=2) Tuesday
+            option(value=3) Wednesday
+            option(value=4) Thursday
+            option(value=5) Friday
+            option(value=6) Saturday
+            option(value=7) Sunday
+        p.paragraph-form
+          label.label(for='start_at') Start at: 
+          input#start_at(type='text' name='start_at' placeholder='8 AM')
+        p.paragraph-form
+          label.label(for='end_at') End at: 
+          input#end_at(type='text' name='end_at' placeholder='8 PM')
+        input.button.button__submit(type='submit' value='Add')

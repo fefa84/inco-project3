@@ -1,0 +1,23 @@
+//- layout.pug
+
+html
+  head
+    style
+        include ../../public/main.css
+        include ../../public/normalize.css
+        
+    title Mr.Coffee schedule website - #{title}
+    block scripts
+      script(src='/index.js')
+  body
+    header.header
+      img.calendar(src='/calendar.png' alt='black icon of calendar')
+      h2.header__title Schedule website
+    main.main
+      
+      h1.title= message
+      hr.line
+      block content
+    footer.footer
+      img.logo(src='/full_logo_white.png' alt='white logo of MrCoffee')
+

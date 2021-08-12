@@ -45,3 +45,31 @@ module.exports.schedules = [
         'end_at': "6PM"
     }
 ]
+
+    
+//     module.exports.toDay = ()=>  {
+//         switch (this.schedules.day) {
+//         case 1:
+//             day= 'Monday';
+//             break;
+//         case 2:
+//             day = 'Tuesday';
+//             break;
+//         case 3:
+//             day = 'Wednesday';
+//             break;
+//         case 4:
+//             dayName = 'Thursday';
+//             break;
+//         case 5:
+//             dayName = 'Friday';
+//             break;
+//         case 6:
+//             dayName = 'Saturday';
+//             break;
+//         case 7:
+//             dayName = 'Sunday';
+//             break;
+//         }
+// }
+

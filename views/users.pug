@@ -1,19 +1,32 @@
-xtends layout.pug
+extends ./layouts/layout
+
 
 block content
-    table
-        tbody
+    include ./layouts/nav-layout
+    a.link(href='http://localhost:3000/users/new')
+            div.main-icons.main-icons--add
+                img.icon(src="/add-user-icon.png", alt="simple icon of adding user")
+                p.index-paragraph Add user 
+    table.table-users
+        tbody.tbody
             tr
                 th First name
                 th Last name
                 th Email
                 th Password
-                th
-            -each user in users
+                th Choose the user
+                th Schedules
+                
+            
+            each user, userId in users 
                 tr.userRow
-                    td #{user.firstname}
-                    td #{user.lastname}
-                    td #{user.email}
-                    td #{user.password}
-                    td
-                        a(href='/users/#{user.userId}') Show
+                    td= user.firstname
+                    td= user.lastname
+                    td= user.email
+                    td= user.password
+                    td 
+                        a.link(href=`http://localhost:3000/users/${userId}`) Show
+                    td 
+                        a.link(href=`http://localhost:3000/users/${userId}/schedules`) Show
+
+                     

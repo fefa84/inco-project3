@@ -34,9 +34,19 @@ body {
    margin-right:20px;
 }
 
+.line {
+   margin-bottom: 7em;
+}
+
+.nav {
+   width:300px;
+   float:left;
+   margin-bottom: 5em;
+}
 .main {
    margin:0 8em;
-   height:73vh;
+   min-height:68vh;
+   
 }
 
 .footer {
@@ -44,6 +54,7 @@ body {
    height:8vh;
    background-color:slategrey;
    position: relative;
+   margin-top: 5em;
 
 }
 
@@ -69,7 +80,7 @@ body {
    font-size:3.5em;
    font-weight:bold;
    text-align: center;
-   margin:2em;;
+   margin:1.5em;;
 }
 
 .index-paragraph {
@@ -82,3 +93,125 @@ body {
    
 }
 
+/*users.pug*/
+
+.table-users {
+   width:60%;
+   border: 1px solid black;
+   border-radius: 10px;
+   background-color: #ffc;
+	border-collapse: collapse;
+   font-size:2em;
+   float:right;
+   margin-right:2em;
+   
+   
+}
+.tbody th {
+   height:45px;
+   background-color: #e0cb95; 
+   padding: 12px 6px;
+}
+.table-users tr{
+	
+	background: rgba(255,255,255,.3);
+	border-bottom:solid 1px black;
+	text-align: left;
+}
+.tbody tr{
+	background: rgba(255,255,255,.1);
+}
+
+.tbody tr:hover{
+	background: rgba(255,0,0,.1);
+}
+
+.table-users td{
+	padding: 12px 6px;
+	text-align: left;
+}
+
+.table-users--singleUser {
+   width:60%;
+}
+
+/*schedules.pug*/
+
+.table-schedules {
+   width:80%;
+   border: 1px solid black;
+   border-radius: 10px;
+   background-color: rgb(190, 199, 202);
+	border-collapse: collapse;
+	margin: right 2em;
+   font-size:2em;
+   
+   
+}
+.tbody-schedules th {
+   height:45px;
+   background-color: #7394b3; 
+   padding: 12px 6px;
+}
+.table-schedules tr{
+	
+	background: rgba(116, 137, 179, 0.349);
+	border-bottom:solid 1px black;
+	text-align: left;
+}
+.tbody-schedules tr{
+	background: rgba(255,255,255,.1);
+}
+
+.tbody-schedules tr:hover{
+	background: rgba(31, 31, 78, 0.1);
+}
+
+.table-schedules td{
+	padding: 12px 6px;
+	text-align: left;
+}
+/* newSchedule*/
+.form-container{
+   width:40vw;
+   display:block;
+   margin: 32px auto;
+   padding:1em;
+   font-size:20px;
+   background-color: lavender;
+   border: 1px solid black;
+}
+
+.label {
+   display:block;
+}
+
+p {
+   font-size:25px;
+}
+
+input {
+   width:300px;
+   border-radius: 3px;
+   padding: 5px;
+}
+.select {
+   width:300px;
+}
+
+.button__submit {
+   width:100px;
+   text-transform: uppercase;
+   cursor: pointer;
+   font-size:20px;
+   font-weight:bold;
+}
+
+.link {
+   text-decoration: none;
+   color: inherit;
+}
+
+.main-icons--add {
+   float:right;
+}

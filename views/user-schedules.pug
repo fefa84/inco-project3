@@ -1,0 +1,19 @@
+extends ./layouts/layout
+
+
+block content
+    include ./layouts/nav-layout
+    table.table-schedules
+        tbody.tbody-schedules
+            tr
+                th User id
+                th Day of a week
+                th Start at
+                th End at
+                
+            each schedule in userSchedules
+                tr.row
+                    td #{schedule.user_id}
+                    td #{schedule.day}
+                    td #{schedule.start_at}
+                    td #{schedule.end_at}

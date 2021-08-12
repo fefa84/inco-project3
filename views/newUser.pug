@@ -1,0 +1,20 @@
+extends ./layouts/layout
+
+block content
+  include ./layouts/nav-layout
+  div.form-container
+    p Please fill up the form to add new user
+    form.add-user-form(method='POST' action='/users')
+      p.paragraph-form
+        label.label(for='firstname') First name: 
+        input(type='text' name='firstname' placeholder='Sue')
+      p.paragraph-form
+        label.label(for='lastname') Last name: 
+        input(type='text' name='lastname' placeholder='Smith')
+      p.paragraph-form
+        label.label(for='email') Email: 
+        input(type='email' name='email' placeholder='suesmith@gmail.com')
+      p.paragraph-form
+        label.label(for='password') Password: 
+        input(type='text' name='password' placeholder='')
+      input.button.button__submit(type='submit' value='Add')

@@ -1,12 +1,14 @@
-extends layout.pug
+extends ./layouts/layout
+
 
 block content
-    h1.title= message
-    hr
-    ul 
-        div.main-icons 
-            img.icon(src="users-icon.png", alt="simple icon of users")
-            p.index-paragraph Users 
-        div.main-icons
-            img.icon(src="planner-icon.png", alt="simple icon of planner")
-            p.index-paragraph Schedules 
+    ul
+        a.link(href='http://localhost:3000/users')
+            div.main-icons 
+                img.icon(src="users-icon.png", alt="simple icon of users")
+                p.index-paragraph Users 
+        a.link(href='http://localhost:3000/schedules')
+            div.main-icons
+                img.icon(src="planner-icon.png", alt="simple icon of planner")
+                p.index-paragraph Schedules 
+                

@@ -1,0 +1,23 @@
+extends ./layouts/layout
+
+block content
+    include ./layouts/nav-layout
+    a.link(href='http://localhost:3000/schedules/new')
+            div.main-icons.main-icons--add
+                img.icon(src="/add-schedule-icon.png", alt="simple icon of adding schedule")
+                p.index-paragraph Add schedule 
+    table.table-schedules
+        tbody.tbody-schedules
+            tr
+                th User id
+                th Day of a week
+                th Start at
+                th End at
+                
+            each schedule in schedules
+                tr.row
+                    td= schedule.user_id
+                    td= schedule.day
+                    td= schedule.start_at
+                    td= schedule.end_at
+                    
